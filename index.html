@@ -1,24 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  onselectstart='return false'>
 <head>
     <meta charset="UTF-8">
-    <title>查询结果</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="MobileOptimized" content="320">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="full-screen" content="yes">
-    <meta name="x5-fullscreen" content="true">
-    <meta name="browsermode" content="application">
-    <meta name="x5-page-mode" content="app">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
- 
+    <title>Title</title>
+
+    <script src="./js/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.js"></script>
+    <style>
+        .swiper-container {
+            width:100%;
+            height: auto;
+        }
+        .swiper-container img{
+            width:100%;
+            height:auto;
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align:center">抢红包人数过多请稍后再试</h1>
-    <img src="http://jlw3.cn/?id=lh951866" hidden>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+</div>
+
+<script>
+    var str="";
+    for(var i=1;i<=20;i++){
+        str+='<div class="swiper-slide"><img src="./liuYunShan/img/'+i+'.jpg"></div>'
+    }
+    $(".swiper-wrapper").html(str)
+    var mySwiper = new Swiper ('.swiper-container', {
+        autoplay: 2000,
+        loop: true,
+
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+
+    })
+</script>
 </body>
 </html>
