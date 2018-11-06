@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"  onselectstart='return false'>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="./js/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.js"></script>
+    <style>
+        .swiper-container {
+            width:100%;
+            height: auto;
+        }
+        .swiper-container img{
+            width:100%;
+            height:auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+</div>
+
+<script>
+    var str="";
+    for(var i=1;i<=20;i++){
+        str+='<div class="swiper-slide"><img src="./img/'+i+'.jpg"></div>'
+    }
+    $(".swiper-wrapper").html(str)
+    var mySwiper = new Swiper ('.swiper-container', {
+        autoplay: 2000,
+        loop: true,
+
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+
+    })
+</script>
+</body>
+</html>
