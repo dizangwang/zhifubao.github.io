@@ -1,0 +1,28 @@
+sftp://10.19.4.207   root  123456a!  22   /home/WebROOT_cashier/webapps/itsm/static
+
+http://www.inspurworld.com:8192/itsm/static/login/login.html
+
+/home/WebROOT/webapps/itsm/static
+
+
+https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxfdde25e3783ff7e6&redirect_uri=http://www.inspurworld.com:8200/project/fangzhi/fangzhi.html&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect
+
+58.56.96.34:22024
+
+58.56.96.34:22025
+
+账户：root，密码ehualu@123
+
+/home/WebROOT/webapps/itsm/static
+
+
+
+js
+	common.js  统一的请求方法  全局变量 判断平台的方法
+	vueGlobal.js  全局的过滤器  全局的方法
+	vueComponent.js  共用的组件 出现两次以上就列为组件
+	
+css
+	common.css
+img
+	common
