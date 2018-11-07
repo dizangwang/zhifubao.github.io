@@ -20,7 +20,6 @@
     </style>
 </head>
 <body>
-
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide"></div>
@@ -33,6 +32,14 @@
 </div>
 
 <script>
+    document.getElementsByTagName("title")[0].innerHTML="刘云杉出生第"+ GetDateDiff()+"天"
+      function GetDateDiff()
+    {
+        var startTime = new Date("2018/09/21").getTime();
+        var endTime = new Date().getTime();
+        var dates = Math.abs((startTime - endTime))/(1000*60*60*24);
+        return  Math.floor(dates);
+    }
     var str="";
     for(var i=1;i<=20;i++){
         str+='<div class="swiper-slide"><img src="./'+i+'.jpg"></div>'
